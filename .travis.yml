@@ -11,7 +11,7 @@ perl:
   - "5.10"
 
 install:
-  - cpanm --quiet --notest PDL
+  - cpanm -v --notest PDL
   - cpanm --quiet --installdeps --with-develop --with-recommends --with-suggets --notest .
 
 env:
