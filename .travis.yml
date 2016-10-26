@@ -10,6 +10,9 @@ perl:
   - "5.12"
   - "5.10"
 
-install: 
+install:
   - cpanm --quiet --notest PDL
-  - cpanm --quiet --installdeps --with-develop --wirth-recommends --with-suggets --notest .
+  - cpanm --quiet --installdeps --with-develop --with-recommends --with-suggets --notest .
+
+env:
+  - PERL_MM_USE_DEFAULT=1
