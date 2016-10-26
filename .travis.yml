@@ -1,4 +1,5 @@
-language: "perl"
+language: perl
+sudo: false
 perl:
   - "5.24"
   - "5.22"
@@ -8,3 +9,5 @@ perl:
   - "5.14"
   - "5.12"
   - "5.10"
+
+install: cpanm --quiet --installdeps --with-develop --with-recommends --with-suggests --notest .
