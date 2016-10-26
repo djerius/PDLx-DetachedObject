@@ -10,4 +10,6 @@ perl:
   - "5.12"
   - "5.10"
 
-install: cpanm --quiet --installdeps --with-develop --notest .
+install: 
+  - cpanm --quiet --notest PDL
+  - cpanm --quiet --installdeps --with-develop --wirth-recommends --with-suggets --notest .
