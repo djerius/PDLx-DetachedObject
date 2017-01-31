@@ -1,30 +1,10 @@
-# --8<--8<--8<--8<--
-#
-# Copyright (C) 2016 Smithsonian Astrophysical Observatory
-#
-# This file is part of PDLx-DetachedObject
-#
-# PDLx-DetachedObject is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or (at
-# your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-# -->8-->8-->8-->8--
-
+# ABSTRACT: parent class for subclassing PDL 2.X from class frameworks
 package PDLx::DetachedObject;
 
 use strict;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = '0.01';
 
 use parent 'PDL';
 
@@ -39,14 +19,12 @@ sub new {
 
 1;
 
+# COPYRIGHT
+
 __END__
 
 
 =pod
-
-=head1 NAME
-
-PDLx::DetachedObject - parent class for subclassing PDL from class frameworks
 
 =head1 SYNTAX
 
@@ -182,31 +160,5 @@ never will call the superclass' constructor.
 Please report any bugs or feature requests to
 C<bug-pdlx-mask@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org/Public/Dist/Display.html?Name=PDLx-DetachedObject>.
-
-=head1 VERSION
-
-Version 0.01
-
-=head1 LICENSE AND COPYRIGHT
-
-Copyright (c) 2016 The Smithsonian Astrophysical Observatory
-
-PDLx::DetachedObject is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-=head1 AUTHOR
-
-Diab Jerius  E<lt>djerius@cpan.orgE<gt>
-
 
 =cut
