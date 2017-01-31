@@ -112,6 +112,13 @@ for my $Class ( qw[
             cmp_deeply( $mpdl->unpdl, [ 0, 2 ], 'mpdl * 2' );
         }
 
+	{
+	    my $pdl = $mpdl->sequence(10);
+	    isa_ok( $pdl, 'PDL' );
+	    ok ( ! $pdl->isa( $Class ),"new pdl is not a $Class" );
+	    cmp_deeply( $pdl->unpdl, [0..9], "result of sequence call" );
+	}
+
     };
 
 }
