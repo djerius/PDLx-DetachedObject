@@ -6,9 +6,8 @@ use warnings;
 
 our $VERSION = '0.02';
 
-use parent 'PDL';
-
-use PDL::Core '';
+our @ISA = qw( PDL );
+use PDL::Lite;
 
 sub initialize { return PDL->null }
 
