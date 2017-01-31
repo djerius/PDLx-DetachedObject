@@ -29,6 +29,7 @@ __END__
 
 =head3 Moo
 
+   # DEPRECATED; use MooX::PDL2 instead
    package MyPDL;
 
    use Moo;
@@ -75,10 +76,20 @@ or with Antlers:
 
 =head1 DESCRIPTION
 
-L<PDL> has a L<non-standard way of handling
-subclasses|PDL::Objects>. Because a B<PDL> object is a blessed scalar,
-outside of using inside-out classes as the subclass, there is no easy
-means of adding extra attributes to the object.
+B<PDLx::DetachedObject> provides a minimal shim between L<PDL> and
+object-orientation frameworks.  Directly subclassing B<PDL> is tricky,
+as a B<PDL> object (a piddle) is a blessed scalar, not a blessed hash.
+B<PDL> provides an L<alternate|PDL::Objects> means of subclassing; this
+class encapsulates that prescription.
+
+For L<Moo> based classes, see L<MooX::PDL2>, which provides a more
+integrated approach.
+
+=head2 Background
+
+Because a B<PDL> object is a blessed scalar, outside of using
+inside-out classes as the subclass, there is no easy means of adding
+extra attributes to the object.
 
 To work around this, B<PDL> will treat any hash blessed into a
 subclass of PDL which has an entry with key C<PDL> whose value is a
@@ -143,6 +154,14 @@ behavior. B<PDLx::DetachedObject> provides a wrapper constructor and
 an B<initialize> class method.  The constructor ensures returns a
 properly subclassed hash with the C<PDL> key, keeping B<PDL> happy.
 When B<PDL> calls the B<initialize> function it gets a normal B<PDL>.
+
+=head2 Classes without required constructor parameters
+
+If your class does I<not> require parameters be passed to the constructor,
+it is safe to overload the C<initialize> method to return a fully fledged
+instance of your class:
+
+ sub initialize { shift->new() }
 
 =head2 Using with Class Frameworks
 

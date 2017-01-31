@@ -1,7 +1,6 @@
 requires "Moo" => "0";
 requires "PDL" => "2.000";
-requires "PDL::Core" => "0";
-requires "parent" => "0";
+requires "PDL::Lite" => "0";
 requires "strict" => "0";
 requires "warnings" => "0";
 
@@ -14,10 +13,11 @@ on 'test' => sub {
   requires "IPC::Open3" => "0";
   requires "Moo" => "0";
   requires "Object::Tiny" => "0";
-  requires "PDL::Lite" => "0";
+  requires "PDL" => "2.000";
   requires "Test::Deep" => "0";
   requires "Test::More" => "0";
   requires "blib" => "1.01";
+  requires "parent" => "0";
   requires "perl" => "5.006";
 };
 
