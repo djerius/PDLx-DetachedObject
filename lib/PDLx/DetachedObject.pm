@@ -158,7 +158,7 @@ never will call the superclass' constructor.
 
 
 Please report any bugs or feature requests to
-C<bug-pdlx-mask@rt.cpan.org>, or through the web interface at
+C<bug-pdlx-detachedobject@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org/Public/Dist/Display.html?Name=PDLx-DetachedObject>.
 
 =cut
