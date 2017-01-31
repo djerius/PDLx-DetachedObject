@@ -4,7 +4,7 @@ PDLx::DetachedObject - parent class for subclassing PDL 2.X from class framework
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # DESCRIPTION
 
