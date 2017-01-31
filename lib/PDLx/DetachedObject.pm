@@ -25,7 +25,7 @@ __END__
 
 =pod
 
-=head1 SYNTAX
+=head1 SYNOPSIS
 
 =head3 Moo
 
