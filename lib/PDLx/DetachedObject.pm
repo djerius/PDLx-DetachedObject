@@ -9,6 +9,16 @@ our $VERSION = '0.02';
 our @ISA = qw( PDL );
 use PDL::Lite;
 
+=begin pod_coverage
+
+=head3 initialize
+
+=head3 new
+
+=end pod_coverage
+
+=cut
+
 sub initialize { return PDL->null }
 
 sub new {
@@ -126,7 +136,7 @@ inheritance scheme will be called by B<MyPDL>'s constructor:
 
   $mypdl = MyPDL->new( required_attr => 2 );
 
-It's also called when B<PDL> needs to create an object to recieve
+It's also called when B<PDL> needs to create an object to receive
 the results of a B<PDL> operation on a B<MyPDL> object:
 
   $newpdl = $mypdl + 1;
@@ -135,7 +145,7 @@ There's one wrinkle, however.  B<PDL> I<must> create an object without
 any extra attributes (it cannot know which values to give them) so
 B<initialize()> is called with a I<single> argument, the class name.
 This means that C<$newpdl> will be an I<incomplete> B<MyPDL> object,
-i.e.  C<required_attr> is uninitiailzed. This can I<really> confuse
+i.e.  C<required_attr> is uninitialized. This can I<really> confuse
 polymorphic code which operates differently when handed a B<PDL> or
 B<MyPDL> object.
 

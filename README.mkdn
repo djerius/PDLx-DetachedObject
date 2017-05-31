@@ -104,7 +104,7 @@ inheritance scheme will be called by **MyPDL**'s constructor:
 
     $mypdl = MyPDL->new( required_attr => 2 );
 
-It's also called when **PDL** needs to create an object to recieve
+It's also called when **PDL** needs to create an object to receive
 the results of a **PDL** operation on a **MyPDL** object:
 
     $newpdl = $mypdl + 1;
@@ -113,7 +113,7 @@ There's one wrinkle, however.  **PDL** _must_ create an object without
 any extra attributes (it cannot know which values to give them) so
 **initialize()** is called with a _single_ argument, the class name.
 This means that `$newpdl` will be an _incomplete_ **MyPDL** object,
-i.e.  `required_attr` is uninitiailzed. This can _really_ confuse
+i.e.  `required_attr` is uninitialized. This can _really_ confuse
 polymorphic code which operates differently when handed a **PDL** or
 **MyPDL** object.
 
