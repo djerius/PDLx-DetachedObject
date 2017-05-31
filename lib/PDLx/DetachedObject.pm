@@ -4,7 +4,7 @@ package PDLx::DetachedObject;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our @ISA = qw( PDL );
 use PDL::Lite;
